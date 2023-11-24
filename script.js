@@ -1,4 +1,12 @@
 window.promises = [];
+        const promises = [
+            new Promise(resolve => setTimeout(() => resolve("Promise 1 resolved"), getRandomTime(1, 5))),
+            new Promise(resolve => setTimeout(() => resolve("Promise 2 resolved"), getRandomTime(1, 5))),
+            new Promise(resolve => setTimeout(() => resolve("Promise 3 resolved"), getRandomTime(1, 5))),
+            new Promise(resolve => setTimeout(() => resolve("Promise 4 resolved"), getRandomTime(1, 5))),
+            new Promise(resolve => setTimeout(() => resolve("Promise 5 resolved"), getRandomTime(1, 5)))
+        ];
+
         Promise.any(promises)
             .then(result => {
                 // Print the result to the output div
